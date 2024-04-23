@@ -20,7 +20,7 @@ export default function Navbar() {
                         children: [
                             {
                                 tagName: 'img',
-                                props: { src: "../static/img/github-6980894_1280.png", id: 'navbar-item', loading:"lazy" },
+                                props: { src: "../static/img/github-6980894_1280.png", id: 'navbar-item', loading:"lazy", alt: "Github logo" },
                                 children: 'Github'
                             }
                         ]
