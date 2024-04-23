@@ -8,8 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "app": "mooch run app"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["web", "framework", "frontend", "mooch"],
+  "author": "Quinn Narlo",
   "license": "ISC",
   "devDependencies": {
     "webpack": "^5.91.0",

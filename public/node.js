@@ -1,5 +1,5 @@
 // node.js
-import { Navbar, Rightside, Leftside } from './import.js'
+import { Navbar, Rightside, Leftside } from './router/routes.js'
 
 
 
