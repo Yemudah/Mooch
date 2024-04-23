@@ -1,0 +1,90 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+#root {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    min-height: 300px;
+}
+
+.nav-wrapper {
+    background-color: rgba(0, 0, 0, 0.569);
+    padding: 16px;
+    margin-bottom: 5%;
+}
+
+.nav-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+}
+
+.left-wrapper h1 {
+    font-size: 3em;
+}
+
+.right-wrapper {
+    background-image: url("./img/pattern-grid.png");
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.726);
+    background-blend-mode: color-burn;
+    padding: 20px;
+}
+
+@media (min-width: 768px) {
+    .wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .left-wrapper h1 {
+        font-size: 4em;
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(0%);
+    }
+    50% {
+        transform: translateX(50%);
+        transform: scale(2);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.circle-wrapper {
+    position: relative;
+    height: 100px;
+}
+
+.circle {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: aquamarine;
+    position: absolute;
+    bottom: 0;
+    animation: move 2s linear infinite;
+}
+
+p {
+    color: gray;
+}
