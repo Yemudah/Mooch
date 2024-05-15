@@ -9,6 +9,7 @@ import _rate_limit from '../errors/_rate_limit.js';
 
 
 import HelloMessage from '../components/HelloMessage.js';
+import About from '../components/About.js';
 
 
-export { HelloMessage, _404, _500, _error, _rate_limit };
+export { HelloMessage, About };

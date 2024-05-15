@@ -1,14 +1,14 @@
 // node.js
-import { HelloMessage } from './router/routes.js'
+import { HelloMessage, About } from './router/routes.js'
 
 
 
 // Define the virtualNode constant
 var virtualNode = {
-    tagName: 'div',
-    props: null,
+    tagName: 'section',
+    props: {id: "wrapper"},
     children: [
-        HelloMessage(),
+        About()
     ]
 
 };

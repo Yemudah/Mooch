@@ -4,7 +4,7 @@ export default function HelloMessage() {
     return {
         tagName: 'h2',
         props: null,
-        children: "Hello world"
+        children: "Hello World: Hello world"
     };
 }
 
