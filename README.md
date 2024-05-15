@@ -4,8 +4,9 @@
 Code Style
 To ensure consistency and readability across the codebase, please follow these coding standards:
 
-- [Coding Standard 1](link to coding standard)
-- [Coding Standard 2](link to coding standard)
+- Follow SOLID Principles
+- Use camel-case from variable nameing.
+- First letter for ever class should be capitalize
 
 # Documenting Your Work
 Please document your work thoroughly to help others understand your code and the problem you are solving. Include:
