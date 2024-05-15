@@ -8,7 +8,7 @@ var virtualNode = {
     tagName: 'div',
     props: null,
     children: [
-        HelloMessage()
+        HelloMessage(),
     ]
 
 };
