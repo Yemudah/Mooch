@@ -1,5 +1,5 @@
 // node.js
-import { Navbar, Rightside, Leftside } from './router/routes.js'
+import { HelloMessage } from './router/routes.js'
 
 
 
@@ -8,20 +8,12 @@ var virtualNode = {
     tagName: 'div',
     props: null,
     children: [
-        Navbar(),
-    ],
+        HelloMessage()
+    ]
 
 };
 
 
-virtualNode.children.push({
-    tagName: 'div',
-    props: { id: 'container', class: 'wrapper' },
-    children: [
-        Leftside(),
-        Rightside()
-    ]
-});
 
 
 // Export the virtualNode constant

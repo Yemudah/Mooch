@@ -8,9 +8,7 @@ import _rate_limit from '../errors/_rate_limit.js';
 
 
 
-import Leftside from '../components/LeftSide.js';
-import Rightside from '../components/Rightside.js';
-import Navbar from '../components/Navbar.js';
+import HelloMessage from '../components/HelloMessage.js';
 
 
-export { Navbar, Rightside, Leftside, _404, _500, _error, _rate_limit };
+export { HelloMessage, _404, _500, _error, _rate_limit };

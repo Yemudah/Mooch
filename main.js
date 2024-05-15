@@ -10,21 +10,21 @@ let isRateLimited = false;
 const server = http.createServer((req, res) => {
   if (isRateLimited) {
     // Serve the "Too Many Requests" HTML page
-    serveErrorPage(res, 429, 'too_many_requests.html');
+    serveErrorPage(res, 429, './public/errors/_rate_limit.js');
     return;
   }
 
   let filePath = path.join(__dirname, 'public', req.url === '/' ? 'index.html' : req.url);
-  let contentType = getContentType(filePath) || 'text/html';
+  let contentType = getContentType(filePath) || 'text/html' || 'text/javascript';
 
   fs.readFile(filePath, (err, content) => {
     if (err) {
       if (err.code === 'ENOENT') {
         // Page not found (404)
-        serveErrorPage(res, 404, '404.html');
+        serveErrorPage(res, 404, './public/errors/_404.js');
       } else {
         // Server error (500)
-        serveErrorPage(res, 500, '500.html');
+        serveErrorPage(res, 500, './public/errors/_500.js');
         console.error(`Server Error: ${err.message}`);
       }
     } else {
@@ -71,17 +71,17 @@ function getContentType(filePath) {
 function serveErrorPage(res, statusCode, filename) {
   let errorPage = filename;
   if (statusCode === 404) {
-    errorPage = '404.html';
+    errorPage = './public/errors/_404.js';
   } else if (statusCode === 500) {
-    errorPage = '500.html';
+    errorPage = './public/errors/_500.js';
   } else if (statusCode === 429) {
-    errorPage = 'too_many_requests.html';
+    errorPage = './public/errors/_rate_limit.js';
   }
 
   fs.readFile(path.join(__dirname, 'public', errorPage), (err, content) => {
     if (err) {
-      res.writeHead(statusCode, { 'Content-Type': 'text/plain' });
-      res.end("Error");
+      res.writeHead(statusCode, { 'Content-Type': 'text/javascript' });
+      serveErrorPage(res, 404, './public/errors/_404.js')
     } else {
       res.writeHead(statusCode, { 'Content-Type': 'text/html' });
       res.end(content, 'utf8');
