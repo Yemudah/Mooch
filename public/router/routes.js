@@ -8,7 +8,7 @@ import _rate_limit from '../errors/_rate_limit.js';
 
 
 
-import Home from '../components/Home.js';
+import TestOne from '../components/TestOne.js';
 
 
-export { Home };
+export { TestOne };

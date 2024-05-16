@@ -1,5 +1,5 @@
 // node.js
-import { Home } from './router/routes.js'
+import { TestOne } from './router/routes.js'
 
 
 
@@ -8,7 +8,7 @@ const App = {
     tagName: 'section',
     props: {id: "wrapper"},
     children: [
-        Home()
+        new TestOne().render(),
     ]
 
 };
