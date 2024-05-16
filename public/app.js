@@ -1,14 +1,14 @@
 // node.js
-import { Home } from './router/routes.js'
+import { TestOne, TesTwo, TestThree } from './router/routes.js'
 
 
 
 // Define the App
 const App = {
     tagName: 'section',
-    props: {id: "wrapper"},
+    props: { id: "wrapper" },
     children: [
-        Home()
+        TestThree("This is test.")
     ]
 
 };

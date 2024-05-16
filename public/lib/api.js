@@ -9,6 +9,7 @@ export default class Renderer {
             Object.entries(App.props).forEach(([prop, value]) => {
                 // Handle null or undefined props
                 if (value !== null && typeof value !== 'undefined') {
+
                     // Check if the prop is className and assign it to the class attribute
                     if (prop === 'class') {
                         element.className = value;
