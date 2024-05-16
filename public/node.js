@@ -3,8 +3,8 @@ import { HelloMessage, About } from './router/routes.js'
 
 
 
-// Define the virtualNode constant
-var virtualNode = {
+// Define the Render
+const virtualNode = {
     tagName: 'section',
     props: {id: "wrapper"},
     children: [
@@ -14,7 +14,4 @@ var virtualNode = {
 };
 
 
-
-
-// Export the virtualNode constant
 export default virtualNode;
