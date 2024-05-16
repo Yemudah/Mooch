@@ -1,10 +1,10 @@
 // components/HelloMessage.js
 
-export default function HelloMessage() {
+export default function HelloMessage(props) {
     return {
         tagName: 'h2',
         props: null,
-        children: "Hello World: Hello world"
+        children: `Hello ${props.name} you are ${props.age}`
     };
 }
 

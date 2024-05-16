@@ -1,4 +1,4 @@
-import virtualNode from '../node.js';
+import App from '../app.js';
 import Renderer from './api.js';
 
 
@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
     }
     const renderer = new Renderer();
-    renderer.render(virtualNode, root);
+    renderer.render(App, root);
 });
 
 
