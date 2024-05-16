@@ -8,8 +8,7 @@ import _rate_limit from '../errors/_rate_limit.js';
 
 
 
-import HelloMessage from '../components/HelloMessage.js';
-import About from '../components/About.js';
+import Home from '../components/Home.js';
 
 
-export { HelloMessage, About };
+export { Home };

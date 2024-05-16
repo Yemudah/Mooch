@@ -1,5 +1,5 @@
 // node.js
-import { HelloMessage } from './router/routes.js'
+import { Home } from './router/routes.js'
 
 
 
@@ -8,10 +8,7 @@ const App = {
     tagName: 'section',
     props: {id: "wrapper"},
     children: [
-        HelloMessage({
-            "name": "James",
-            "age": "34"
-        })
+        Home()
     ]
 
 };
