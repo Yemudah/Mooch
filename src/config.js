@@ -1,5 +1,18 @@
+/**
+ * Configuration module.
+ * Provides configuration settings for the application.
+ */
 module.exports = {
-    port: 3000,
-    requestLimit: 100 // Maximum number of requests before rate limiting
-  };
-  
+  /**
+   * The port number on which the server will listen.
+   * @type {number}
+   */
+  port: 3000,
+
+  /**
+   * The maximum number of requests allowed before rate limiting.
+   * @type {number}
+   */
+  requestLimit: 100
+};
+

@@ -1,6 +1,18 @@
+/**
+ * Module dependencies.
+ */
 const path = require('path');
 
+/**
+ * Content type service module.
+ * Provides functionality to determine the content type of files.
+ */
 module.exports = {
+  /**
+   * Get the content type based on the file extension.
+   * @param {string} filePath - The path to the file.
+   * @returns {string} - The content type of the file.
+   */
   getContentType(filePath) {
     const extname = path.extname(filePath);
     switch (extname) {
@@ -21,3 +33,4 @@ module.exports = {
     }
   }
 };
+
