@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mooch App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div id="app">
+        {% if data['content'] %}
+            {% if data['content'] is mapping %}
+                {% for key, content in data['content'].items() %}
+                    <div class="message {{ data['classes'].get(key, '') }}">
+                        {{ content }}
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="message">
+                    {{ data['content'] }}
+                </div>
+            {% endif %}
+        {% else %}
+            <div class="message">
+                No content available.
+            </div>
+        {% endif %}
+        
+        <!-- Dynamic form -->
+        {% if data['form'] %}
+            <form action="{{ data['form']['action'] }}" method="post">
+                {% for field in data['form']['fields'] %}
+                    <input type="{{ field['type'] }}" name="{{ field['name'] }}" placeholder="{{ field['placeholder'] }}" {% if field['required'] %}required{% endif %}>
+                {% endfor %}
+                <input type="hidden" name="route" value="{{ request.endpoint }}">
+                <button type="submit">Submit</button>
+            </form>
+        {% endif %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+/* Basic styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.message {
+    font-size: 1.5em;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.heading-style {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Form styles */
+form {
+    margin-top: 20px;
+}
+
+input[type="text"],
+input[type="email"] {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 70%;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
